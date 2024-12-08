@@ -1,0 +1,158 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f4;
+  overflow: hidden;
+}
+
+.container {
+  width: 430px;
+  height: 932px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; /* Ensure nothing overflows the container */
+}
+  
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+  padding-left: 10px;
+}
+
+.header-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  padding-left: 80px;
+  padding-top: 20px;
+}
+
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center; /* Center elements in the form */
+  width: 100%; /* Make sure the form takes up the full container width */
+}
+
+.signup-form label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 3px; /* Further reduced space between label and input */
+  width: 88%;
+}
+
+.signup-form input, .signup-form select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  color: #6C757D;
+  opacity: 1;
+  border: 1px solid #00000040;
+  background-color: white;
+  width: 85%; /* Reduce width to leave space on the sides */
+  margin-bottom: 10px; /* Reduced space below input field */
+  margin-left: auto; /* Align elements to the center */
+  margin-right: auto; /* Align elements to the center */
+  padding-bottom: 13px;
+}
+
+.signup-form .next-btn {
+  background-color: #7AC943;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 45%; /* Make button width smaller and centered */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.login-link {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 78px; /* Add margin to give space above the link */
+}
+.login-link a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* Styles for the second form (Other Form) */
+.other-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Add more space between form elements */
+  align-items: center; /* Center align all elements horizontally */
+  width: 100%;
+  padding: 20px; /* Optional: Add padding for better spacing */
+}
+
+.other-form label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px; /* Adjust margin for space between label and input */
+  width: 100%; /* Ensure label takes up full width */
+  text-align: center; /* Center the label text */
+}
+
+.other-form input,
+.other-form select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  color: #6C757D;
+  opacity: 1;
+  border: 1px solid #00000040;
+  background-color: white;
+  width: 85%; /* Make input fields 85% width of the container */
+  margin-bottom: 10px; /* Add space below each element */
+  margin-left: auto; /* Align elements to the center */
+  margin-right: auto; /* Align elements to the center */
+  padding-bottom: 13px;
+}
+
+.other-form .create-account-btn {
+  background-color: #7AC943;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 45%; /* Button width */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
