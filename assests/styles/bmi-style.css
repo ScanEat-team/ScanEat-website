@@ -1,0 +1,138 @@
+/* General Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+    overflow: hidden;
+}
+
+.container {
+    width: 430px;
+    height: 932px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden; /* Ensure nothing overflows the container */
+}
+
+/* Header Section */
+header {
+    background: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    height: 60px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center; /* Center the content inside the header */
+    flex-direction: column;
+    font-size: 16px;
+    width: 100%; /* Ensure full width */
+}
+
+#bmi-id {
+    font-size: 20px; /* Font size for the user ID */
+    font-weight: bold;
+    color: #000; /* Adjust color if needed */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure it's centered within the container */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Edit Profile Section */
+main {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* List for Recommendations */
+ul {
+    margin: 10px 0 20px;
+    padding-left: 20px; /* Add indentation for list */
+    color: #555;
+    font-size: 16px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+.bmi-section,
+.nutrition-section {
+    margin-bottom: 30px;
+}
+
+.bmi-section p,
+.nutrition-section p {
+    line-height: 1.5;
+}
+
+.bmi-section ul {
+    margin: 10px 0;
+}
+
+.nutrition-section p span,
+.bmi-section p span {
+    color: #007BFF; /* Highlight dynamic values with blue color */
+    font-weight: bold;
+}
+
+/* Footer Styling */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    position: sticky;
+    bottom: 0;
+}
+
+nav a {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+}
+
+nav img {
+    width: 40px;
+    height: 40px;
+}

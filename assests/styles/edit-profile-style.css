@@ -1,0 +1,170 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for centering */
+    background: #f4f4f4; /* Light background */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.container {
+    width: 430px;
+    height: 932px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Section */
+header {
+    background: #fff;
+    padding: 20px 20px;  /* Increase padding for more space */
+    display: flex;
+    justify-content: space-between; /* This makes the header elements spaced out */
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    height: 80px;  /* Increase the height of the header */
+}
+
+/* Adjust header content for more space */
+header {
+    background: #fff;
+    padding: 15px 20px;  /* Keeps the reduced padding */
+    display: flex;
+    justify-content: space-between; /* Keeps elements spaced out */
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    height: 60px;  /* Height of the header */
+}
+
+/* Adjust header content for more space */
+.header-content {
+    display: flex;
+    justify-content: center; /* Center the user-id */
+    flex-grow: 1;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+#user-id {
+    font-size: 20px; /* Font size for the user ID */
+    font-weight: bold;
+    color: #000; /* Adjust color if needed */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure it's centered within the container */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Edit Profile Section */
+main {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Section */
+.form-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.form-section:first-of-type h2 {
+    border-bottom: none; /* Remove the border under the 'Personal Information' section */
+}
+
+.form-section:nth-of-type(2) h2 {
+    border-top: 1px solid #ddd; /* Move the border to above 'Other' */
+    padding-top: 20px;
+}
+
+/* Styling for form items */
+.form-item {
+    margin-bottom: 15px;
+}
+
+.form-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #6C757D;  /* Font color for the label */
+}
+
+.form-item input,
+.form-item select {
+    width: 95%;
+    padding: 9px;
+    font-size: 16px;
+    border: none;  /* Remove stroke */
+    border-radius: 10px;
+    background-color: rgba(108, 117, 125, 0.25);  /* Background color with 25% opacity */
+    color: #000;  /* Black text color for input fields */
+}
+
+.form-item input[type="text"],
+.form-item input[type="email"],
+.form-item input[type="tel"],
+.form-item input[type="number"],
+.form-item input[type="date"] {
+    font-family: Arial, sans-serif;
+}
+
+.form-item select {
+    cursor: pointer;
+}
+
+/* Save Button */
+#save-btn {
+    width: 50%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #7AC943;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    position: sticky;
+    bottom: 0;
+}
+
+nav a {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+}
+
+nav img {
+    width: 40px;
+    height: 40px;
+}

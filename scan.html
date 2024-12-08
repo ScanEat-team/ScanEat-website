@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan</title>
+    <link rel="stylesheet" href="assests/styles/scan-style.css">
+    <!-- Add QuaggaJS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Section -->
+        <main>
+            <div id="scanner">
+                <video id="camera-feed" autoplay></video>
+                <canvas id="canvas" style="display:none;"></canvas>
+            </div>
+            <p id="barcode-result">Scanning...</p>
+        </main>
+
+        <!-- Footer Navigation -->
+        <nav>
+            <a href="home.html"><img src="assests/img/home.png" alt="Home"></a>
+            <a href="bmi.html"><img src="assests/img/file.png" alt="bmi"></a>
+            <a href="scan.html"><img src="assests/img/shutter-camera.png" alt="Scan"></a>
+            <a href="database.html"><img src="assests/img/application.png" alt="database"></a>
+            <a href="personal-Info.html"><img src="assests/img/user.png" alt="profile"></a>
+        </nav>  
+    </div>
+    <!-- Link to the scan.js file -->
+    <script src="assests/scripts/scan.js"></script>
+</body>
+</html>

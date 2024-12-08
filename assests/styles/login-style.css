@@ -1,0 +1,113 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f4;
+  overflow: hidden;
+}
+
+.container {
+  width: 430px;
+  height: 932px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; /* Ensure nothing overflows the container */
+}
+  
+header {
+  display: flex;
+  justify-content: flex-start; /* Aligns the back button to the left */
+  width: 100%; /* Ensures header takes up full width */
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 40px; /* Increase the font size for better visibility */
+  cursor: pointer;
+  padding: 10px; /* Add padding to make the button larger */
+}
+.app-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #7AC943;
+    width: 269px;
+    height: 72px;
+    line-height: 72px;
+    margin-bottom: 20px; 
+    margin-left: 90px;
+}
+
+.emoji img {
+    display: block;
+    margin: 0 auto;
+    width: 340px; /* Set the width */
+    height: 400px; /* Set the height */
+    margin-bottom: 20px; /* Add margin below the image to separate from the input fields */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Reduced gap between elements */
+  width: 100%;
+  align-items: center;
+}
+
+.login-form input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 15px;
+  color: #6C757D;
+  opacity: 1;
+  border: 1px solid #00000040;
+  background-color: white;
+  width: 70%; /* Set width to 80% */
+  margin-bottom: 10px; /* Add space below input */
+}
+.login-form .sign-in-btn {
+    background-color: #7AC943;
+    color: white;
+    border: none;
+    padding: 8px 0;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 45%; /* Make the button the same width as the inputs */
+    margin-top: 10px; /* Add some space above the sign-in button */
+}
+
+.login-form label {
+  font-size: 14px; /* Label font size */
+  color: #6C757D; /* Color of the label */
+  margin-bottom: -6px; /* Add space below label */
+  text-align: left; /* Align label to the left */
+  width: 60%; /* Match label width with input */
+  display: block; /* Ensure label is block-level for proper alignment */
+  padding-right: 45px;
+}
+
+.signup-link {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 180px; /* Add margin to give space above the link */
+}
+.signup-link a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+  
