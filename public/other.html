@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScanEat - Other</title>
+    <link rel="stylesheet" href="assests/styles/other-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="back-btn" onclick="window.history.back()">←</button>
+            <h1 class="header-title">Other</h1>
+        </header>
+        <main>
+            <form class="other-form">
+                <input type="number" placeholder="Weight" required>
+                <input type="number" placeholder="Height" required>
+
+                <select required>
+                    <option value="" disabled selected>Diet Preference</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="non-vegetarian">Non-Vegetarian</option>
+                </select>
+                
+                <button type="button" class="create-account-btn" onclick="window.location.href='login.html'">Create Account</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

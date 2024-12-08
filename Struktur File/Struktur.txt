@@ -1,0 +1,18 @@
+ ScanEat
+ ┣ .vscode
+ ┃ ┗ settings.json
+ 
+
+ ┃ ┣ bmi.html
+ ┃ ┣ database.html
+ ┃ ┣ edit-profile.html
+ ┃ ┣ home.html
+ ┃ ┣ index.html
+ ┃ ┣ login.html
+ ┃ ┣ other.html
+ ┃ ┣ personal-Info.html
+ ┃ ┣ scan.html
+ ┃ ┗ signup.html
+ ┣ package-lock.json
+ ┣ package.json
+ ┗ server.js

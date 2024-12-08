@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="assests/styles/edit-profile-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <span id="user-id">User#177013</span>
+            </div>
+        </header>
+
+        <!-- Edit Profile Form -->
+        <main>
+            <section class="form-section">
+                <h2>Personal Information</h2>
+                <form id="edit-profile-form">
+                    <div class="form-item">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" value="John Doe" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="sex">Sex</label>
+                        <select id="sex" name="sex" required>
+                            <option value="male" selected>Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="domicile">Domicile</label>
+                        <input type="text" id="domicile" name="domicile" value="New York" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" value="1990-01-01" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" value="+1234567890" required>
+                    </div>
+                </form>
+            </section>
+
+            <section class="form-section">
+                <h2>Other</h2>
+                <form id="edit-profile-form">
+                    <div class="form-item">
+                        <label for="weight">Weight</label>
+                        <input type="number" id="weight" name="weight" value="70" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="height">Height</label>
+                        <input type="number" id="height" name="height" value="175" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="diet">Diet Preference</label>
+                        <select id="diet" name="diet" required>
+                            <option value="not_on_diet" selected>Not on Diet</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="diabetic_diet">Diabetic Diet</option>
+                            <option value="cholesterol_diet">Cholesterol Diet</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item">
+                        <button type="submit" id="save-btn">Save Profile</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <nav>
+            <a href="home.html"><img src="assests/img/home.png" alt="Home"></a>
+            <a href="bmi.html"><img src="assests/img/file.png" alt="bmi"></a>
+            <a href="scan.html"><img src="assests/img/shutter-camera.png" alt="Scan"></a>
+            <a href="database.html"><img src="assests/img/application.png" alt="database"></a>
+            <a href="personal-Info.html"><img src="assests/img/user.png" alt="profile"></a>
+        </nav>  
+    </div>
+    <script src="assests/scripts/edit-profile.js"></script>
+</body>
+</html>
