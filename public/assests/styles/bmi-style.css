@@ -136,3 +136,8 @@ nav img {
     width: 40px;
     height: 40px;
 }
+
+#personal-bmi, #bmi-interpretation {
+    color: black;
+    font-weight: bold; /* Opsional untuk lebih menonjolkan teks */
+}

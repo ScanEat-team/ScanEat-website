@@ -24,11 +24,28 @@ document.querySelector('.login-form').addEventListener('submit', async function 
         const data = await response.json();
 
         if (response.ok) {
-            // Simpan data respons ke localStorage
-            localStorage.setItem('userData', JSON.stringify(data));
+            // Simpan data user ke localStorage
+            const userData = {
+                name: data.user.name,
+                email: data.user.email,
+                sex: data.user.sex || 'N/A', // Menambahkan fallback jika data tidak ada
+                domicile: data.user.domicile || 'N/A', 
+                birthDate: data.user.birthdate || 'N/A',
+                phone: data.user.phone || 'N/A',
+                weight: data.user.weight || 'N/A',
+                height: data.user.height || 'N/A',
+                bmi: data.user.bmi || 'N/A', // 
+                dietPreference: data.user.dietPreference || 'N/A',
+            };
+            localStorage.setItem('userData', JSON.stringify(userData));
+
+            // Notifikasi sukses
             alert('Login successful!');
-            window.location.href = 'personal-info.html'; // Redirect ke halaman lain
+
+            // Redirect ke halaman user profile
+            window.location.href = 'personal-info.html';
         } else {
+            // Tampilkan pesan kesalahan
             alert(`Login failed: ${data.message || 'Unknown error'}`);
         }
     } catch (error) {
