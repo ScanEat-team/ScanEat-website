@@ -11,13 +11,15 @@ async function submitSignup() {
           email: document.getElementById('email').value,
           password: document.getElementById('password').value,
           sex: document.getElementById('sex').value,
+          domicile: document.getElementById('domicile').value,
           birthdate: document.getElementById('dob').value,
+          phone: document.getElementById('phone').value,
           weight: parseFloat(document.getElementById('weight').value),
           height: parseFloat(document.getElementById('height').value),
           dietPreference: document.getElementById('diet-preference').value
         })
       });
-  
+
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
