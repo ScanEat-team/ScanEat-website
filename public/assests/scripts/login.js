@@ -1,38 +1,38 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    // Prevent form submission if validation fails
+document.querySelector('.login-form').addEventListener('submit', async function (event) {
     event.preventDefault();
 
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-    
-    // Email validation regex pattern (basic)
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-    // Email validation
-    if (!email.value || !emailRegex.test(email.value)) {
-        alert('Please enter a valid email address.');
+    // Validasi email dan password
+    if (!email || !password) {
+        alert('Email and password are required.');
         return;
     }
 
-    // Password validation (at least 6 characters)
-    if (!password.value || password.value.length < 6) {
-        alert('Password must be at least 6 characters long.');
-        return;
-    }
+    try {
+        // Kirim permintaan login ke API
+        const response = await fetch('https://scaneats-cc-server-gonlxn2arq-et.a.run.app/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'x-api-key': 'jalan',
+            },
+            body: new URLSearchParams({ email, password }),
+        });
 
-    // If everything is valid, submit the form or redirect
-    alert('Form is valid!');
-    // Proceed with form submission or redirection
-    window.location.href = 'home.html'; // Replace with your redirect destination
-});
+        const data = await response.json();
 
-document.getElementById('showPassword').addEventListener('click', function() {
-    const passwordField = document.getElementById('password');
-    
-    // Toggle between password and text input type
-    if (passwordField.type === 'password') {
-        passwordField.type = 'text'; // Show password
-    } else {
-        passwordField.type = 'password'; // Hide password
+        if (response.ok) {
+            // Simpan data respons ke localStorage
+            localStorage.setItem('userData', JSON.stringify(data));
+            alert('Login successful!');
+            window.location.href = 'personal-info.html'; // Redirect ke halaman lain
+        } else {
+            alert(`Login failed: ${data.message || 'Unknown error'}`);
+        }
+    } catch (error) {
+        console.error('Error during login:', error);
+        alert('An error occurred. Please try again.');
     }
 });

@@ -1,0 +1,5 @@
+_pycache_
+node_modules
+.vscode
+.idea
+private

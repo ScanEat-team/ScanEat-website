@@ -1,6 +1,6 @@
 async function submitSignup() {
     try {
-      const response = await fetch('https://scaneats-cc-server-gonlxn2arq-et.a.run.app/register', {
+      const response = await fetch('https://scaneats-cc-server-421390099984.asia-southeast2.run.app/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
