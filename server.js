@@ -21,6 +21,6 @@ app.get('/', (req, res) => {
 });
 
 // Mendengarkan pada port yang ditentukan (misalnya, port 3000)
-app.listen(3000, () => {
-  console.log('Server berjalan pada port 3000');
+app.listen(8080, () => {
+  console.log('Server berjalan pada port 8080');
 });

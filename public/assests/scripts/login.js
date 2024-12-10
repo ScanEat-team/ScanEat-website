@@ -43,7 +43,7 @@ document.querySelector('.login-form').addEventListener('submit', async function 
             alert('Login successful!');
 
             // Redirect ke halaman user profile
-            window.location.href = 'personal-info.html';
+            window.location.href = 'home.html';
         } else {
             // Tampilkan pesan kesalahan
             alert(`Login failed: ${data.message || 'Unknown error'}`);
