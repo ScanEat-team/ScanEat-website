@@ -16,115 +16,15 @@
                     <img id="search-btn" src="assests/img/search.png" alt="Search Icon">
                 </div>
             </div>
-
-            <div class="search-results-container" id="search-results">
-                <div class="search-result-item" data-product-name="BengBeng" data-product-image="assests/img/frog.png">
-                    <img src="assests/img/frog.png" alt="Snack Icon" class="result-icon">
-                    <p>BengBeng</p>
-                </div>
-                <div class="search-result-item" data-product-name="BengBeng" data-product-image="assests/img/frog.png">
-                    <img src="assests/img/frog.png" alt="Snack Icon" class="result-icon">
-                    <p>BengBeng</p>
-                </div>
-                <div class="search-result-item" data-product-name="BengBeng" data-product-image="assests/img/frog.png">
-                    <img src="assests/img/frog.png" alt="Snack Icon" class="result-icon">
-                    <p>BengBeng</p>
-                </div>
+            <div class="search-results-container" id="search-results" style="display: none;"> <!-- Dropdown untuk hasil pencarian -->
             </div>
         </header>
 
         <!-- Main Section -->
         <main>
             <section class="product-section">
-                <h2>Snack & Beverage</h2>
-                <div class="product-grid">
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar red"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar yellow"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar green"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar red"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar red"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar red"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar red"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar red"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar green"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar green"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar green"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar green"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar green"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar green"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar green"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar green"></div>
-                    </div>
-                    <div class="product">
-                        <img src="assests/img/frog.png" alt="Product Image">
-                        <p class="product-name">Product Name</p>
-                        <div class="status-bar green"></div>
-                    </div>
-                    
-                <!-- Add more product items as needed -->
+                <h2>All Foods</h2>
+                <div class="product-grid" id="product-grid"></div>
             </section>
         </main>
 
@@ -135,32 +35,27 @@
             <a href="scan.html"><img src="assests/img/shutter-camera.png" alt="Scan"></a>
             <a href="database.html"><img src="assests/img/application.png" alt="database"></a>
             <a href="personal-Info.html"><img src="assests/img/user.png" alt="profile"></a>
-        </nav>  
+        </nav>
+
+        <!-- Modal -->
         <div id="product-modal" class="modal">
             <div class="modal-container">
                 <div class="modal-content">
                     <span class="close-btn">&times;</span>
-                    <h2 class="product-title">Product Name</h2>
-                    <img id="product-image" src="" alt="Product Image" class="product-image">
-        
+                    <h2 class="product-title" id="modal-product-name">Product Name</h2>
+                    <img id="modal-product-image" src="" alt="Product Image" class="product-image">
+                    <p id="modal-product-description"></p>
+                    <p><strong>UPC:</strong> <span id="modal-product-upc"></span></>
+                    <p><strong>Kategori:</strong> <span id="modal-product-kategori"></span></p>
                     <h3 class="section-title">Nutrition Facts</h3>
                     <div class="nutrition-facts">
-                        <p>Total Fat: <span id="total-fat"></span></p>
-                        <p>Cholesterol: <span id="cholesterol"></span></p>
-                        <p>Saturated Fat: <span id="saturated-fat"></span></p>
-                        <p>Total Carbohydrate: <span id="total-carbohydrate"></span></p>
-                        <p>Dietary Fiber: <span id="dietary-fiber"></span></p>
-                        <p>Sugar: <span id="sugar"></span></p>
-                        <p>Natrium: <span id="natrium"></span></p>
-                    </div>
-        
-                    <h3 class="section-title">Personalized Nutrition Information</h3>
-                    <div class="personalized-info">
-                        <p>Consuming this<span id="product-name-placeholder"></span> will fulfills your daily needs of:</p>
-                        <p id="personalized-calories"></p>
-                        <p id="personalized-sugar"></p>
-                        <p id="personalized-salt"></p>
-                        <p id="personalized-fat"></p>
+                        <p>Total Fat: <span id="modal-total-fat"></span></p>
+                        <p>Cholesterol: <span id="modal-cholesterol"></span></p>
+                        <p>Saturated Fat: <span id="modal-saturated-fat"></span></p>
+                        <p>Total Carbohydrate: <span id="modal-total-carbohydrate"></span></p>
+                        <p>Dietary Fiber: <span id="modal-dietary-fiber"></span></p>
+                        <p>Sugar: <span id="modal-sugar"></span></p>
+                        <p>Sodium: <span id="modal-sodium"></span></p>
                     </div>
                 </div>
             </div>

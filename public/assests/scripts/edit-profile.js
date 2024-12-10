@@ -1,33 +1,41 @@
-document.getElementById('edit-profile-form').addEventListener('submit', function (e) {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    // Ambil data user dari localStorage
+    const userData = JSON.parse(localStorage.getItem('userData'));
 
-    // Getting the form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const dob = document.getElementById('dob').value;
-    const sex = document.getElementById('sex').value;
-    const domicile = document.getElementById('domicile').value;
-    const weight = document.getElementById('weight').value;
-    const height = document.getElementById('height').value;
-    const diet = document.getElementById('diet').value;
+    // Isi form dengan data dari localStorage
+    if (userData) {
+        document.getElementById('name').value = userData.name || '';
+        document.getElementById('sex').value = userData.sex.toLowerCase() || 'male';
+        document.getElementById('domicile').value = userData.domicile || '';
+        document.getElementById('dob').value = userData.birthDate || '';
+        document.getElementById('phone').value = userData.phone || '';
+        document.getElementById('weight').value = userData.weight || '';
+        document.getElementById('height').value = userData.height || '';
+        document.getElementById('diet').value = userData.dietPreference.toLowerCase().replace(/ /g, '_') || 'not_on_diet';
+    } else {
+        alert('No user data found. Please log in again.');
+    }
 
-    // Create an object to store the new profile information
-    const updatedProfile = {
-        name,
-        email,
-        phone,
-        dob,
-        sex,
-        domicile,
-        weight,
-        height,
-        diet
-    };
+    // Simpan perubahan data ketika tombol "Save Profile" diklik
+    document.getElementById('edit-profile-form').addEventListener('submit', (e) => {
+        e.preventDefault(); // Mencegah reload halaman
 
-    // Store the updated profile in localStorage
-    localStorage.setItem('profile', JSON.stringify(updatedProfile));
+        // Ambil nilai dari form
+        const updatedUserData = {
+            name: document.getElementById('name').value,
+            sex: document.getElementById('sex').value.charAt(0).toUpperCase() + document.getElementById('sex').value.slice(1),
+            domicile: document.getElementById('domicile').value,
+            birthDate: document.getElementById('dob').value,
+            phone: document.getElementById('phone').value,
+            weight: document.getElementById('weight').value,
+            height: document.getElementById('height').value,
+            dietPreference: document.getElementById('diet').value.replace(/_/g, ' ')
+        };
 
-    // Redirect to personal-info.html
-    window.location.href = 'personal-Info.html';
+        // Simpan data ke localStorage
+        localStorage.setItem('userData', JSON.stringify(updatedUserData));
+
+        // Redirect kembali ke halaman Personal Info
+        window.location.href = 'personal-info.html';
+    });
 });

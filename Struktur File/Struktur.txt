@@ -1,8 +1,6 @@
  ScanEat
  ┣ .vscode
  ┃ ┗ settings.json
- 
-
  ┃ ┣ bmi.html
  ┃ ┣ database.html
  ┃ ┣ edit-profile.html
