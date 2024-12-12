@@ -2,10 +2,10 @@
 ![image](https://github.com/ScanEat-team/.github/blob/8faa7ee51b00d1f5a86bec4a29b02d659291fb68/assets/Logo.png)
 # ScanEat  
 
+ScanEat is a web-based app designed to help consumers make the best nutritional choices to meet their personalized dietary needs, especially on high-fat-sugar-salt (HFSS) products by scanning the barcode of the product. Providing customized food recommendations based on macronutrient content and individual preferences, ScanEat enables users to make informed choices about products available at convenience stores.
+
 ## Website
 <img src="https://github.com/ScanEat-team/.github/blob/6ef29165b6c5eeaf627ab21475292c2ea1696093/assets/UI.png">
-
-ScanEat is a web-based app designed to help consumers make the best nutritional choices to meet their personalized dietary needs, especially on high-fat-sugar-salt (HFSS) products by scanning the barcode of the product. Providing customized food recommendations based on macronutrient content and individual preferences, ScanEat enables users to make informed choices about products available at convenience stores. 
 
 ## Team Members of C242-PR635
 
