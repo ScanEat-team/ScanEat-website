@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScanEat - Login</title>
     <link rel="stylesheet" href="assests/styles/login-style.css">
+    <link rel="stylesheet" href="assests/styles/popup-style.css"> <!-- Tambahkan file CSS popup -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,7 +14,6 @@
             <button class="back-btn" onclick="window.history.back()">←</button>
         </header>
         <main>
-  
             <div class="emoji">
                 <img src="assests/img/logo2.png" alt="OK Emoji">
             </div>
@@ -29,6 +29,23 @@
             </div>
         </main>
     </div>
+
+    <!-- Pop-up container -->
+    <div class="popup-container" id="popupContainer">
+        <div class="popup">
+            <h2>Login Successful!</h2>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+    <div class="popup-container" id="errorPopupContainer">
+        <div class="popup">
+            <h2>Login Failed</h2>
+            <p id="errorMessage"></p> <!-- Pesan error akan ditampilkan di sini -->
+            <button onclick="closeErrorPopup()">OK</button>
+        </div>
+    </div>
+
     <script src="assests/scripts/login.js"></script>
+    <script src="assests/scripts/popup.js"></script> <!-- Tambahkan file JS popup -->
 </body>
 </html>
