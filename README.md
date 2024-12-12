@@ -1,1 +1,1 @@
-<img src="https://github.com/ScanEat-team/.github/blob/dba92d5ef3f15e933a3f2482365fdc698b8012c9/assets/Group%2054.png">
+<img src="https://github.com/ScanEat-team/.github/blob/6ef29165b6c5eeaf627ab21475292c2ea1696093/assets/UI.png">
